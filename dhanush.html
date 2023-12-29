@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://wallpapercave.com/wp/wp2714637.jpg') center/cover no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Pacifico', cursive;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align content to the left */
+            justify-content: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        /* Add your styles for the content */
+        .content {
+            text-align: left; /* Align text content to the left */
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        /* Add styles for the title container */
+        .title-container {
+            color: #fff;
+            margin: 20px;
+        }
+
+        /* Add styles for the wishes container */
+        .wishes-container {
+            text-align: left;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            color: #333;
+        }
+
+        /* Media query for mobile devices */
+        @media only screen and (max-width: 600px) {
+            .content {
+                padding: 20px;
+            }
+
+            .wishes-container {
+                max-width: none;
+            }
+        }
+    </style>
+    <!-- Link to Pacifico font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+</head>
+<body>
+    <div class="title-container">
+        <h1>Your Website Title</h1>
+    </div>
+    <div class="content">
+        <div class="wishes-container" id="wishes-container">
+            <!-- Empty container for dynamic content insertion -->
+        </div>
+        <!-- Add more content as needed -->
+    </div>
+
+    <script>
+        // JavaScript for letter-by-letter appearance
+        const wishesText = "Bryan had made peace with himself and felt comfortable with the choices he made. This had made all the difference in the world. Being alone no longer bothered him, and this was essential since there was a good chance he might spend the rest of his life alone in a cell. It was a concerning development that he couldn't get out of his mind. He'd had many friends throughout his early years and had fond memories of playing with them, but he couldn't understand how it had all stopped. There was some point as he grew up that he played with each of his friends for the very last time, and he had no idea that it would be the last.";
+
+        const wishesContainer = document.getElementById("wishes-container");
+
+        function showTextLetterByLetter(text, container) {
+            container.innerHTML = "";
+            text.split("").forEach((char, index) => {
+                setTimeout(() => {
+                    container.innerHTML += char;
+                }, index * 50);
+            });
+        }
+
+        showTextLetterByLetter(wishesText, wishesContainer);
+    </script>
+</body>
+</html>
