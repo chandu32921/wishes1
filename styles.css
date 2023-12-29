@@ -1,3 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    background: url('https://img.freepik.com/free-vector/falling-golden-confetti-happy-birthday-background-design_1017-25818.jpg?size=626&ext=jpg') center / cover no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.title {
+    position: absolute;
+    top: 0.1px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3em;
+    font-family: 'Pacifico', cursive;
+    color: gold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.2em;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Glitter text animation */
+.glitter-letter {
+    position: relative;
+    display: inline-block;
+    animation: glitterAnimation 2s infinite linear;
+}
 /* ... (previous styles) */
 
 .image-container {
@@ -46,5 +94,27 @@
     .image-item {
         flex: 1 0 100%; /* Make each image take full width on mobile */
         margin: 0 0 20px 0; /* Adjust spacing between images on mobile */
+    }
+}
+
+@keyframes shine {
+    from {
+        filter: brightness(1);
+    }
+    to {
+        filter: brightness(2);
+    }
+}
+
+/* Glitter text animation keyframes */
+@keyframes glitterAnimation {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
     }
 }
