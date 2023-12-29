@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Generate and display 6 images with links
     generateImagesWithLinks("imageContainer", [
         "dhanush.html",
-        "page2.html",
+        "chandu.html",
         "page3.html",
         "page4.html",
         "page4.html",
