@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://images.rawpixel.com/image_social_landscape/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcm00NjdiYXRjaDUtc2NlbmUtaC0wMDFjLXgta3p3ZHIzcWguanBn.jpg?s=du_O8kK0FeMgd0p3wXZ-apGnLgfQ8KMeajf5RJ5G1GI') center/cover no-repeat;
+            font-family: 'Dancing Script', cursive;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Add your styles for the content */
+        .content {
+            text-align: center;
+            padding: 50px;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        /* Add styles for the title container */
+        .title-container {
+            color: #fff;
+            margin: 20px;
+        }
+
+        /* Add styles for the wishes container */
+        .wishes-container {
+            text-align: left;
+            max-width: 500px; /* Adjust the max-width as needed */
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.5); /* Set the alpha channel for transparency */
+            border-radius: 10px;
+            color: #333; /* Dark color for wishes text */
+        }
+
+        /* Media query for mobile devices */
+        @media only screen and (max-width: 600px) {
+            .content {
+                padding: 20px;
+            }
+
+            .wishes-container {
+                max-width: none; /* Remove max-width for full width on smaller screens */
+            }
+        }
+    </style>
+    <!-- Link to Dancing Script font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap">
+</head>
+<body>
+    <div class="title-container">
+        <h1>Your Website Title</h1>
+    </div>
+    <div class="content">
+        <div class="wishes-container" id="wishes-container">
+            <!-- Empty container for dynamic content insertion -->
+        </div>
+        <!-- Add more content as needed -->
+    </div>
+
+    <script>
+        // JavaScript for letter-by-letter appearance
+        const wishesText = "Bryan had made peace with himself and felt comfortable with the choices he made. This had made all the difference in the world. Being alone no longer bothered him, and this was essential since there was a good chance he might spend the rest of his life alone in a cell. It was a concerning development that he couldn't get out of his mind. He'd had many friends throughout his early years and had fond memories of playing with them, but he couldn't understand how it had all stopped. There was some point as he grew up that he played with each of his friends for the very last time, and he had no idea that it would be the last.";
+
+        const wishesContainer = document.getElementById("wishes-container");
+
+        function showTextLetterByLetter(text, container) {
+            container.innerHTML = ""; // Clear the container
+            text.split("").forEach((char, index) => {
+                setTimeout(() => {
+                    container.innerHTML += char;
+                }, index * 50); // Adjust the delay as needed
+            });
+        }
+
+        // Trigger the letter-by-letter appearance
+        showTextLetterByLetter(wishesText, wishesContainer);
+    </script>
+</body>
+</html>
