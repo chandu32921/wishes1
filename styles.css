@@ -48,12 +48,16 @@ body::before {
 }
 /* ... (previous styles) */
 
+/* ... (previous styles) */
+
 .image-container {
     display: flex;
     justify-content: center;
     margin-top: 20px;
     flex-wrap: wrap;
     overflow-x: auto; /* Add horizontal scrolling for smaller screens */
+    overflow-y: auto; /* Allow vertical scrolling */
+    max-height: 400px; /* Set a fixed height for the container */
 }
 
 .image-item {
@@ -89,6 +93,7 @@ body::before {
         flex-direction: column; /* Display images in a vertical layout */
         align-items: center; /* Center images in the column */
         overflow-x: hidden; /* Disable horizontal scrolling */
+        max-height: none; /* Remove the fixed height for mobile */
     }
 
     .image-item {
@@ -96,6 +101,7 @@ body::before {
         margin: 0 0 20px 0; /* Adjust spacing between images on mobile */
     }
 }
+
 
 @keyframes shine {
     from {
