@@ -4,14 +4,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Generate and display 6 images with links
     generateImagesWithLinks("imageContainer", [
-        "page1.html",
+        "dhanush.html",
         "page2.html",
         "page3.html",
         "page4.html",
         "page4.html",
         "abhinaya.html",
         "jyo.html",
-        "page5.html",
+        "prenu.html",
         "page5.html",
         
        // Updated to link to abhinaya.html
