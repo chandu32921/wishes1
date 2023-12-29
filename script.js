@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "abhinaya.html",
         "jyo.html",
         "page5.html",
+        "page5.html",
+        
        // Updated to link to abhinaya.html
     ]);
 });
