@@ -49,6 +49,7 @@ body::before {
 /* ... (previous styles) */
 
 /* ... (previous styles) */
+/* ... (previous styles) */
 
 .image-container {
     display: flex;
@@ -93,7 +94,9 @@ body::before {
         flex-direction: column; /* Display images in a vertical layout */
         align-items: center; /* Center images in the column */
         overflow-x: hidden; /* Disable horizontal scrolling */
-        max-height: none; /* Remove the fixed height for mobile */
+        max-height: none; 
+        overflow-x: auto; /* Add horizontal scrolling for smaller screens */
+    overflow-y: auto;/* Remove the fixed height for mobile */
     }
 
     .image-item {
@@ -101,6 +104,7 @@ body::before {
         margin: 0 0 20px 0; /* Adjust spacing between images on mobile */
     }
 }
+
 
 
 @keyframes shine {
