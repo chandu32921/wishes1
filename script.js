@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "page4.html",
         "page4.html",
         "abhinaya.html",
-        "page4.html",
+        "jyo.html",
         "page5.html",
        // Updated to link to abhinaya.html
     ]);
